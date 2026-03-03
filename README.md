@@ -1,1 +1,1 @@
-# RyhmatyoOne
+Repository ryhmätyö projektille RyhmätyöOne
