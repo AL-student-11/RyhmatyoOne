@@ -1,1 +1,2 @@
 Just a text file for exercise
+This file is two lines long.
