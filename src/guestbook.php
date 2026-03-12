@@ -72,12 +72,18 @@ if($data_set === false) {
 		<form method="post">
 			<!-- Javascript stores user's datetime from browser to a hidden input -->
 			<input id="time" type="hidden" name="datetime">
-			<label for="name">Name: </label>
-			<input id="name" name="name" type=text required>
-			<label for="email">Email: </label>
-			<input id="email" name="email" type=text>
-			<label for="message">Message</label>
-			<textarea id="message" name="message" rows=5></textarea>
+			<div class="name_div">
+				<label for="name">Name: </label>
+				<input id="name" name="name" type=text required>
+			</div>
+			<div class="email_div">
+				<label for="email">Email: </label>
+				<input id="email" name="email" type=text>
+			</div>
+			<div class="message_div">
+				<label for="message">Message</label>
+				<textarea id="message" name="message" rows=5></textarea>
+			</div>
 			<button id="button" type="submit">Submit</button>
 		</form>
 	</div>
