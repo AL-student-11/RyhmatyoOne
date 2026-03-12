@@ -64,7 +64,7 @@ if($data_set === false) {
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="guestbook">
-	<link rel="stylesheet" ref="css/guestbook.css">
+	<link rel="stylesheet" href="css/guestbook.css">
 	<title>Health Fitness Plus's Guestbook</title>
 </head>
 <body>
