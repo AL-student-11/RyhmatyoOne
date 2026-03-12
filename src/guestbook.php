@@ -42,10 +42,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 	}
 
 	// Redirect to self to prevent secondary submits on reload
-	header("Location: " . $_SERVER['PHP_SELF']);
+    header("Location: " . $_SERVER['PHP_SELF']);
 
-	// No need to process rest of file after redirection to self
-	exit();
+    // No need to process rest of file after redirection to self
+    exit();
 }
 
 // Load previous guestbook entries to a variable or exit on failure
@@ -68,46 +68,48 @@ if($data_set === false) {
 	<title>Health Fitness Plus's Guestbook</title>
 </head>
 <body>
-	<div class="entry">
-		<form method="post">
-			<!-- Javascript stores user's datetime from browser to a hidden input -->
-			<input id="time" type="hidden" name="datetime">
-			<div class="name_div">
-				<label for="name">Name: </label>
-				<input name="name" type=text required>
-			</div>
-			<div class="email_div">
-				<label for="email">Email: </label>
-				<input name="email" type=text>
-			</div>
-			<div class="message_div">
-				<label for="message">Message</label>
-				<textarea name="message" rows=5></textarea>
-			</div>
-			<button id="button" type="submit">Submit</button>
-		</form>
-	</div>
-	<div class="entries">
-		<!-- Static caption and table headers -->
-		<table>
-			<caption>Guestbook entries</caption>
-			<tr>
-				<th>Time</th>
-				<th>Name</th>
-				<th>Email</th>
-				<th>Message</th>
-			</tr>
-			<?php // Guestbook entries dynamically from database
-				while($row = $data_set->fetch_assoc()) {
-					echo "<tr>";
-					echo "<td>" . htmlspecialchars($row['dt']) . "</td>";
-					echo "<td id='name'>" . htmlspecialchars($row['name']) . "</td>";
-					echo "<td>" . htmlspecialchars($row['email']) . "</td>";
-					echo "<td id='msg'>" . htmlspecialchars($row['message']) . "</td>";
-					echo "</tr>";
-				}
-			?>
-		</table>
+	<div class="container">
+		<div class="entry">
+			<form method="post">
+				<!-- Javascript stores user's datetime from browser to a hidden input -->
+				<input id="time" type="hidden" name="datetime">
+				<div class="name_div">
+					<label for="name">Name: </label>
+					<input name="name" type=text required>
+				</div>
+				<div class="email_div">
+					<label for="email">Email: </label>
+					<input name="email" type=text>
+				</div>
+				<div class="message_div">
+					<label for="message">Message</label>
+					<textarea name="message" rows=5></textarea>
+				</div>
+				<button id="button" type="submit">Submit</button>
+			</form>
+		</div>
+		<div class="entries">
+			<!-- Static caption and table headers -->
+			<table>
+				<caption>Guestbook entries</caption>
+				<tr>
+					<th>Time</th>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Message</th>
+				</tr>
+				<?php // Guestbook entries dynamically from database
+					while($row = $data_set->fetch_assoc()) {
+						echo "<tr>";
+						echo "<td>" . htmlspecialchars($row['dt']) . "</td>";
+						echo "<td id='name'>" . htmlspecialchars($row['name']) . "</td>";
+						echo "<td>" . htmlspecialchars($row['email']) . "</td>";
+						echo "<td id='msg'>" . htmlspecialchars($row['message']) . "</td>";
+						echo "</tr>";
+					}
+				?>
+			</table>
+		</div>
 	</div>
 <script src="js/guestbook.js"></script>
 </body>
