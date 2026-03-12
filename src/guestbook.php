@@ -69,7 +69,9 @@ if($data_set === false) {
 </head>
 <body>
 	<div class="container">
+		<h1>Health Fitness Plus's Guestbook</h1>
 		<div class="entry">
+			<h4>Add entry to guestbook and leave a message</h4>
 			<form method="post">
 				<!-- Javascript stores user's datetime from browser to a hidden input -->
 				<input id="time" type="hidden" name="datetime">
@@ -91,7 +93,7 @@ if($data_set === false) {
 		<div class="entries">
 			<!-- Static caption and table headers -->
 			<table>
-				<caption>Guestbook entries</caption>
+				<caption>Our Visitors</caption>
 				<tr>
 					<th>Time</th>
 					<th>Name</th>
