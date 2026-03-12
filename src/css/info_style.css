@@ -1,0 +1,30 @@
+body {
+    background-color: lightgray;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    
+    flex-direction: column;
+    
+}
+
+body div {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    background-color: whitesmoke;
+    justify-content: center;
+}
+
+body div p {
+    padding:10px;
+}
+
+body div img {
+    max-width: 500px;
+    max-height: 500px;
+}

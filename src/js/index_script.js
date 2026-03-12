@@ -14,5 +14,19 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("btnInfo").addEventListener("click", () => {
         document.getElementById("pageContent").setAttribute("src", "info.html");
     });
+
+    //guestbook - to be added
+    document.getElementById("btnGuestbook").addEventListener("click", () => {
+        //code for going completely to the wanted page instead of opening under index navigation
+        //window.location.href = "address wanted";
+    });
+
+    //gallery - to be added
+    document.getElementById("btnGallery").addEventListener("click", () => {
+        //code for going completely to the wanted page instead of opening under index navigation
+        //window.location.href = "gallery.html";
+    });
+
+
 });
 
