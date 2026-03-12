@@ -103,7 +103,7 @@ if($data_set === false) {
 					echo "<td>" . htmlspecialchars($row['dt']) . "</td>";
 					echo "<td>" . htmlspecialchars($row['name']) . "</td>";
 					echo "<td>" . htmlspecialchars($row['email']) . "</td>";
-					echo "<td>" . htmlspecialchars($row['message']) . "</td>";
+					echo "<td id='msg'>" . htmlspecialchars($row['message']) . "</td>";
 					echo "</tr>";
 				}
 			?>
