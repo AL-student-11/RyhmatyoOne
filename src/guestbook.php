@@ -68,8 +68,9 @@ if($data_set === false) {
 	<title>Health Fitness Plus's Guestbook</title>
 </head>
 <body>
+	<h1>Our guestbook</h1>
 	<div class="container">
-		<h1>Our guestbook</h1>
+		<img src="siteimages/silhouette-small.png">
 		<div class="entry">
 			<h4>Add entry to guestbook and leave a message</h4>
 			<form method="post">
@@ -90,28 +91,29 @@ if($data_set === false) {
 				<button id="button" type="submit">Submit</button>
 			</form>
 		</div>
-		<div class="entries">
-			<!-- Static caption and table headers -->
-			<table>
-				<caption>Our Visitors</caption>
-				<tr>
-					<th>Time</th>
-					<th>Name</th>
-					<th>Email</th>
-					<th>Message</th>
-				</tr>
-				<?php // Guestbook entries dynamically from database
-					while($row = $data_set->fetch_assoc()) {
-						echo "<tr>";
-						echo "<td>" . htmlspecialchars($row['dt']) . "</td>";
-						echo "<td id='name'>" . htmlspecialchars($row['name']) . "</td>";
-						echo "<td>" . htmlspecialchars($row['email']) . "</td>";
-						echo "<td id='msg'>" . htmlspecialchars($row['message']) . "</td>";
-						echo "</tr>";
-					}
-				?>
-			</table>
-		</div>
+		<img src="siteimages/lifting-small.png">
+	</div>
+	<div class="entries">
+		<!-- Static caption and table headers -->
+		<table>
+			<caption>Our Visitors</caption>
+			<tr>
+				<th>Time</th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Message</th>
+			</tr>
+			<?php // Guestbook entries dynamically from database
+				while($row = $data_set->fetch_assoc()) {
+					echo "<tr>";
+					echo "<td>" . htmlspecialchars($row['dt']) . "</td>";
+					echo "<td id='name'>" . htmlspecialchars($row['name']) . "</td>";
+					echo "<td>" . htmlspecialchars($row['email']) . "</td>";
+					echo "<td id='msg'>" . htmlspecialchars($row['message']) . "</td>";
+					echo "</tr>";
+				}
+			?>
+		</table>
 	</div>
 <script src="js/guestbook.js"></script>
 </body>
