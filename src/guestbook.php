@@ -69,7 +69,7 @@ if($data_set === false) {
 </head>
 <body>
 	<div class="container">
-		<h1>Health Fitness Plus's Guestbook</h1>
+		<h1>Our guestbook</h1>
 		<div class="entry">
 			<h4>Add entry to guestbook and leave a message</h4>
 			<form method="post">
