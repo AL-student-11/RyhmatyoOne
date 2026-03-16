@@ -27,7 +27,7 @@ if($result === false) {
 	die("Something went wrong: " .  $conn->error);
 }
 
-// Catch if file was reloaded when user submitted a new guestbook entry
+// Catch if user is submitting a new guestbook entry
 // and consturct a SQL INSERT statement using user posted values and execute it
 if($_SERVER["REQUEST_METHOD"] == "POST") {
 	$dt = $_POST["datetime"];
