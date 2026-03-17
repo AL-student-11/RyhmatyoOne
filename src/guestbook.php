@@ -56,15 +56,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     exit();
 }
 
-// Load previous guestbook entries to a variable or exit on failure
-$sql = "SELECT * FROM entries ORDER BY dt DESC";
-$data_set = $conn->query($sql);
-if($data_set === false) {
-	die("Loading guetbook entries failed: " . $conn->error);
+try {
+	$sql = "SELECT * FROM entries ORDER BY dt DESC";
+	$data_set = $conn->query($sql);	// Load previous guestbook entries to a variable
+} catch(Throwable) {
+	$data_set = false; // Make sure variable exists even if query fails
 }
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
