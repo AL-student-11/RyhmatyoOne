@@ -42,17 +42,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 	$email = $_POST["email"];
 	$message = $_POST["message"];
 
-	$entry_cmd = $conn->prepare("INSERT INTO entries (dt, name, email, message) VALUES(?, ?, ?, ?)");
-	$entry_cmd->bind_param("ssss", $dt, $name, $email, $message);
-	if( ! $entry_cmd->execute() ) {
-		die("Inserting guestbook entry failed: " . $conn->error);
-	}
-
-	// Redirect to self to prevent secondary submits on reload
-    header("Location: " . $_SERVER['PHP_SELF']);
-
-    // No need to process rest of file after redirection to self
-    exit();
+	try {
+		$entry_cmd = $conn->prepare("INSERT INTO entries (dt, name, email, message) VALUES(?, ?, ?, ?)");
+		$entry_cmd->bind_param("ssss", $dt, $name, $email, $message);
+		$entry_cmd->execute()
+	} catch(Throwable) {
+		// Yes, empty. No ideas how to react.
+	} finally {
+		// Redirect to self to prevent secondary submits on reload
+    	header("Location: " . $_SERVER['PHP_SELF']);
+    }
 }
 
 try {
