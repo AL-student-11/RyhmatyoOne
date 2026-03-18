@@ -15,5 +15,5 @@ PHP – Server-side code
 
 SQL – Database
 
-## Licenses
+## Image licenses
 Fp and info images and images on guestbook from pixabay, open source under pixabay license.
