@@ -1,12 +1,5 @@
 <?php
 
-// HTML stub for error conditions
-$ERROR_HTML = '<!DOCTYPE html><html lang="en">';
-$ERROR_HTML .= '<body>';
-$ERROR_HTML .= '<h1 style="text-align:center">Guestbook currently unavailable</h1>';
-$ERROR_HTML .= '</body>';
-$ERROR_HTML .= '</html>';
-
 // Set reporting mode to almost all
 $driver = new mysqli_driver();
 $driver->report_mode = MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT;
@@ -31,6 +24,12 @@ try {
 	$result = $conn->query($sql);
 
 } catch (mysqli_sql_exception $e) {
+	// HTML stub for error condition
+	$ERROR_HTML = '<!DOCTYPE html><html lang="en">';
+	$ERROR_HTML .= '<body>';
+	$ERROR_HTML .= '<h1 style="text-align:center">Guestbook currently unavailable</h1>';
+	$ERROR_HTML .= '</body>';
+	$ERROR_HTML .= '</html>';
 	echo $ERROR_HTML;
 	return;
 }
