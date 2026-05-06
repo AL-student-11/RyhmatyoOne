@@ -109,7 +109,7 @@
                 <input name="SunOpen" type=time value=<?php if($rows) echo '"' . htmlspecialchars($data[6][1]) . '"';?>>
                 <input name="SunClose" type=time value=<?php if($rows) echo '"' . htmlspecialchars($data[6][2]) . '"';?>>
             </div>
-            <input type="submit" id="btnOk" value="Ok">
+            <input type="submit" id="btnOk" value="Save">
             <input type="reset" id="btnCancel" value="Reset">
         </form>
     </div>
