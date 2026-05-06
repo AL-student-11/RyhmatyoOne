@@ -54,7 +54,6 @@
     <link rel="stylesheet" href="./css/settimes_style.css">
 </head>
 <body>
-	<?php echo "<p>Hello " . $_SESSION["admin"] . ":" . $_SESSION["stamp"] . ":" . session_id() . "</p>";?>
     <div id="header">
         <h1>Set opening and closing times</h1>
         <button id="btnLogout" onclick="window.location.href='logout.php'">Log out</button>

@@ -24,7 +24,6 @@ if(session_is_valid()) {
     <link rel="stylesheet" href="./css/adlog_style.css">
 </head>
 <body>
-	<?php echo "<p>Hello " . $_SESSION["admin"] . ":" . $_SESSION["stamp"] . ":" . session_id() . "</p>";?>
     <h1>Admin login</h1>
     <div class="loginBox">
         <form action="auth.php" method="post">
