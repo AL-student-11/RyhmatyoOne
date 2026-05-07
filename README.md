@@ -1,4 +1,4 @@
-# Fictional Company Website
+# Fictional Company's Website
 ## Overview
 
 This project is a website developed for a fictional company as a student group project. The purpose of the project is to learn web development skills and learn how to use git and github.
