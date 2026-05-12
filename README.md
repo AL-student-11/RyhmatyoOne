@@ -45,6 +45,7 @@ Fp and info images and images on guestbook from pixabay, open source under pixab
     - db    => "database's name"
 
     Edit reguire "../connction/connect.php" lines to match direcroty structure on the server if needed.
+    - auth.php
     - pick_times.php
     - save_creds.php
     - savetimes.php
